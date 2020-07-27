@@ -36,7 +36,9 @@ class ApartmentDetails extends Component {
                         <Text style={styles.textLabels}>Inquilino: {this.props.apartment.tenantName}</Text>
                         <Text style={styles.textLabels}>Fecha Inicio: {this.props.apartment.start}</Text>
                     </View>
-                    <Image style={styles.tenantTinyIcon} source={require("../assets/images/icons/tenant.png")} />
+                    <TouchableOpacity onPress={() => this.props.navigation.navigate("TenantCRUDScreen", { apartmentId: this.props.apartment.apartmentId, apartmentCode: this.props.apartmentCode })}>
+                        <Image style={styles.tenantTinyIcon} source={require("../assets/images/icons/tenant.png")} />
+                    </TouchableOpacity>
                 </View>
                 <View style={styles.detailRows}>
                     <View style={styles.topSeparator}>

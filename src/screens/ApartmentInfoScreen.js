@@ -23,7 +23,7 @@ class ApartmentInfoScreen extends Component {
         return(
             <View style={styles.container}>
                 <Header />
-                <ApartmentDetails apartment={filteredApartment}/>
+                <ApartmentDetails apartment={filteredApartment} navigation={this.props.navigation} />
                 <Footer navigation={this.props.navigation}/>
             </View>
         )

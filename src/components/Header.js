@@ -3,10 +3,23 @@ import { View, Text, StyleSheet, TextInput, TouchableOpacity, Image } from 'reac
 import { colors } from '../assets/constants/colors';
 
 class Header extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            filterCriteria: ""
+        };
+    }
+
+    setFilterCriteria = (filterCriteria) => {
+        this.setState({
+            filterCriteria: filterCriteria
+        });
+    }
+
     render() {
         return(
             <View style={styles.mainBackgrond}>
-                <TextInput style={styles.searchInput}></TextInput>
+                <TextInput style={styles.searchInput} onChangeText={this.setFilterCriteria}></TextInput>
                 <TouchableOpacity style={styles.touchable}>
                     <Image source={require("../assets/images/icons/magnifying-glass.png")} style={styles.tinyIcon} />
                 </TouchableOpacity>

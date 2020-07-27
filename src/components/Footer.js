@@ -6,11 +6,11 @@ class Footer extends Component {
     render() {
         return(
             <View style={styles.mainBackgrond}>
-                <TouchableOpacity style={styles.touchable}>
+                <TouchableOpacity style={styles.touchable} onPress={this.props.navigation.popToTop}>
                     <Image source={require("../assets/images/icons/logout.png")} style={styles.tinyIcon} />
                     <Text style={styles.textLabels}>Cerrar Sesion</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.touchable}>
+                <TouchableOpacity style={styles.touchable} >
                     <Image source={require("../assets/images/icons/main.png")} style={styles.tinyIcon} />
                     <Text style={styles.textLabels}>Inicio</Text>
                 </TouchableOpacity>
